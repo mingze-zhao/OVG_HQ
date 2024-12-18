@@ -1,0 +1,1 @@
+python training/train.py --config /root/autodl-tmp/online-vg/lighthouse/configs/qvhighlight_unify/clip_slowfast_online_vg_qvhighlight_unify.yml --savecode

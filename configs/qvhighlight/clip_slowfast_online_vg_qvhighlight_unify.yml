@@ -1,0 +1,20 @@
+query: unify
+dset_name: qvhighlight_unify
+
+# Online Loss
+online_loss: ['reg', 'cls', 'dis']
+dis_loss_coef: 0.2 # 0.8,0.6,0.4,0.2
+
+eval_query_type: "ori_segment"
+# multi-modal query
+multi_query: true
+query_type: segment_text # text, segment, segment_text
+t_feat_dir: {"text":'data/QVHighlight/clip_text', "segment":{"ori_image":['data/QvHighlight_Image/clip_ori', 'data/QvHighlight_Image/slowfast_ori'],"gen_image":['data/QvHighlight_Image/clip_gen', 'data/QvHighlight_Image/slowfast_gen'],"ori_segment":['data/QVHighlight/clip', 'data/QVHighlight/slowfast'],"gen_segment":['data/QVHighlight/clip_gen', 'data/QVHighlight/slowfast_gen']}} #新加
+
+# knowlege_distillation
+has_teacher: True
+temperature: 2
+distillation_loss: {"query_feat": "kl", "logits":"kl", "reg":"kl"}
+distillation_pos: ["logits", "spans", "query_feat_0", "query_feat_1"] #"logits", "spans", "query_feat_0", "query_feat_1"
+teacher_model_path: exp/Last/add_post_real_mr_ttt/qvhightlight_segment_text/transformer_ttt_pred_query_4_D_D_seed41_lr1.0E-4/checkpoint/epoch17.ckpt
+

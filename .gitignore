@@ -1,0 +1,9 @@
+# .gitignore
+
+# 忽略 data 文件夹
+data/
+
+# 忽略 checkpoints 文件夹
+exp/
+
+wandb/

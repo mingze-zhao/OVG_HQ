@@ -1,0 +1,8 @@
+query: segment
+dset_name: qvhighlight_segment
+
+# multi-modal query
+multi_query: true
+query_type: segment_text # text, segment, segment_text
+t_feat_dir: {"text":'data/QVHighlight/clip_text', "segment":['data/QVHighlight/clip', 'data/QVHighlight/slowfast']} #新加
+

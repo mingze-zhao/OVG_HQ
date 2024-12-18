@@ -1,0 +1,1 @@
+python training/train.py --config configs/qvhighlight_icq/clip_slowfast_online_vg_qvhighlight_icq_image_ref_text.yml

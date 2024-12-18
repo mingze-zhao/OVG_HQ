@@ -1,0 +1,1 @@
+python training/train.py --config configs/qvhighlight/clip_slowfast_online_vg_qvhighlight_segment_text.yml --savecode
