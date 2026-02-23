@@ -1,9 +1,56 @@
 # .gitignore
 
-# 忽略 data 文件夹
+# ========== 数据与原始媒体（大文件） ==========
 data/
 
-# 忽略 checkpoints 文件夹
+# ========== 实验输出与 checkpoint（大文件） ==========
 exp/
-
 wandb/
+*.ckpt
+*.pth
+*.pt
+*.bin
+*.safetensors
+
+# ========== 预计算标签 / 特征（大文件） ==========
+label_output/
+
+# ========== 压缩包与视频 ==========
+*.tar
+*.tar.gz
+*.zip
+*.mp4
+*.avi
+*.mkv
+
+# ========== 日志 ==========
+*.log
+valtext.log
+valNone.log
+
+# ========== Python ==========
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# ========== Jupyter ==========
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ========== 编辑器 / 本地配置 ==========
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ========== 环境与密钥 ==========
+.env
+.env.local
+*.pem
