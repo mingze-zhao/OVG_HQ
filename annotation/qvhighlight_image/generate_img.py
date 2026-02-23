@@ -6,7 +6,10 @@ from diffusers import StableDiffusion3Pipeline
 device = "cuda"
 
 # 加载 Stable Diffusion 模型
-pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3-medium-diffusers", torch_dtype=torch.bfloat16, token=os.environ.get("HF_TOKEN"),
+pipe = StableDiffusion3Pipeline.from_pretrained(
+    "stabilityai/stable-diffusion-3-medium-diffusers",
+    torch_dtype=torch.bfloat16,
+    token=os.environ.get("HF_TOKEN"),
 )
 pipe = pipe.to(device)
 
